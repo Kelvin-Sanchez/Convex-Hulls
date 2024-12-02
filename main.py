@@ -13,6 +13,9 @@ from sklearn.metrics import confusion_matrix
 
 def data_generation(size, seed, fing_md, wrist_md):
 
+    # Set numpy rand seed
+    np.random.seed(1234)
+    
     # Create a normal guassian distribution of data points for finger length and wrist size
     finger_length = np.random.normal(fing_md, 1, size)
     wrist_size = np.random.normal(wrist_md, 0.5, size)
