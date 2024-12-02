@@ -13,9 +13,6 @@ from sklearn.metrics import confusion_matrix
 
 def data_generation(size, seed, fing_md, wrist_md):
 
-    # Declare and initialize a seed for the random function to use
-    np.random.seed(seed)
-
     # Create a normal guassian distribution of data points for finger length and wrist size
     finger_length = np.random.normal(fing_md, 1, size)
     wrist_size = np.random.normal(wrist_md, 0.5, size)
@@ -156,21 +153,6 @@ def run_test(sizes):
         print("Area difference between Convex Hulls: ", convex_hull_subtractions(df1, df2))
         print("***************************************************************")
 
-
-def detect_accuracy_change(threshold, model, df1, df2):
-    acc_change = accuracy_change(model, df1, df2)
-    if acc_change > threshold:
-        print("Accuracy change detected!")
-    else:
-        print("Model appears to functioning normally.")
-
-
-def detect_dataset_shift(threshold, df1, df2):
-    area_diff = convex_hull_subtractions(df1, df2)
-    if area_diff > threshold:
-        print("Dataset shift detected!")
-    else:
-        print("Dataset difference is within threshold.")
 
 sample_sizes = [20000, 25000, 50000, 100000]
 
