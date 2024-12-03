@@ -1,3 +1,9 @@
+"""
+Kelvin Sanchez
+John's Hopkins University 
+Assured Autonomy
+Data Set Shift Detection with Convex Hulls
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -10,7 +16,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 
-
+# data_generation algorithm developed with the help of Google's Gemini
 def data_generation(size, seed, fing_md, wrist_md):
 
     # Set numpy rand seed
