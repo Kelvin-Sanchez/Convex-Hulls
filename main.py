@@ -1,6 +1,6 @@
 """
 Kelvin Sanchez
-John's Hopkins University 
+Johns Hopkins University 
 Assured Autonomy
 Data Set Shift Detection with Convex Hulls
 """
